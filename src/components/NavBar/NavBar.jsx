@@ -43,7 +43,7 @@ const NavBar = () => {
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <a className="nav-link text-dark d-flex align-items-center gap-2" href="#">
-                                <PiHamburgerBold size={24} /> CATÁLOGO
+                                <PiHamburgerBold size={24} /> PRODUCTOS
                             </a>
                         </li>
                         <li className="nav-item">

@@ -1,8 +1,9 @@
+import { HiMenuAlt1 } from "react-icons/hi";
 
 const ItemListContainer = ({ saludo }) => {
     return (
         <div className="container mt-4">
-            <h2 className="text-center"> {saludo} </h2>
+            <h1 className="saludo-oleo text-center text-danger"> {saludo} </h1>
         </div>
     );
 };
