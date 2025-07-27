@@ -1,0 +1,21 @@
+/* Hace que la barra sea el contenedor de referencia */
+nav.navbar {
+    position: relative;
+}
+
+/* Carrito fijo dentro de la barra, arriba a la derecha */
+.cart-container {
+    position: absolute;
+    
+    z-index: 10; /* Asegura que quede encima de otros elementos */
+    cursor: pointer;
+}
+
+.nav-link {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500; /* Brillo */
+}
