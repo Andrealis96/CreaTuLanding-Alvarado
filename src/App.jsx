@@ -7,7 +7,7 @@ function App () {
     <>
       <NavBar />
       <ItemListContainer saludo = {"Bienvenidos a Carbón y Leños Burger"} />
-      <h6 className='text-center fw-bold fst-italic' > {" El mejor sabor con la calidad que nos caracteriza "} </h6>
+      <h6 className='text-center fw-bold fst-italic' > {" El mejor sabor con la calidad que nos caracteriza.  "} </h6>
     </>
   )
 }
