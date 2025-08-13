@@ -8,13 +8,14 @@ const NavBar = () => {
     return (
         <nav className="navbar navbar-dark bg-warning px-4 position-relative">
             {/* Logo que abre el menú */}
-            <button 
-                className="navbar-brand btn btn-link p-0" 
-                type="button" 
+            <a  
+                href="#"
+                className="navbar-brand p-0" 
                 data-bs-toggle="offcanvas" 
                 data-bs-target="#menuLateral"
                 aria-controls="menuLateral"
                 style={{ cursor: 'pointer' }}
+                onClick={(e) => e.preventDefault()}
             >
                 <img 
                     src={logoCarbonLenos} 
@@ -23,7 +24,7 @@ const NavBar = () => {
                     height={60}
                     className="d-inline-block align-text-top"
                 />
-            </button>
+            </a>
 
             {/* Carrito fijo arriba a la derecha */}
             <CartWidget />
