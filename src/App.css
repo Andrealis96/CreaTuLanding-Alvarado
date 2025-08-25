@@ -1,0 +1,29 @@
+.saludo-oleo {
+    font-family: "Oleo Script", system-ui;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    border: 1px solid #ffc107; /* efecto iluminado */
+}
+
+.hero-banner {
+    background-image: url("/ruta/tu-imagen.png"); /* pon la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px; /* ajusta la altura */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white; /* texto en blanco */
+}

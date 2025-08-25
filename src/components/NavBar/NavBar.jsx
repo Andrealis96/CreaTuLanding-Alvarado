@@ -1,8 +1,9 @@
-import CartWidget from '../CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 import logoCarbonLenos from '../../assets/iconos/logoCarbonLenos.png';
-import { PiHamburgerBold } from "react-icons/pi";
-import { FaReceipt } from "react-icons/fa"; 
-import './NavBar.css';
+import { FaHamburger, FaPizzaSlice } from "react-icons/fa";
+import { GiFrenchFries, GiSodaCan, GiSandwich } from "react-icons/gi";
+import { BiRestaurant } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -36,21 +37,57 @@ const NavBar = () => {
                 id="menuLateral" 
                 aria-labelledby="menuLateralLabel"
             >
+                {/* Link al Home */}
                 <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="menuLateralLabel">MENÚ</h5>
-                    <button type="button" className="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <Link 
+                        to="/"
+                        className="offcanvas-title text-decoration-none text-dark fw-bold fs-2" // estilos para que se vea igual
+                        id="menuLateralLabel"
+                    >
+                        HOME
+                    </Link>
+                    {/* Botón de cerrar */}
+                    <button 
+                        type="button" 
+                        className="btn-close btn-close-dark" 
+                        data-bs-dismiss="offcanvas" 
+                        aria-label="Close"
+                    ></button>
                 </div>
+
+
+                {/* GATEGORIAS */}
                 <div className="offcanvas-body">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link text-dark d-flex align-items-center gap-2" href="#">
-                                <PiHamburgerBold size={24} /> PRODUCTOS
-                            </a>
+                            <Link className="nav-link text-dark d-flex align-items-center gap-2" to="/category/hamburguesas">
+                                <FaHamburger size={22} /> HAMBURGUESAS
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link text-dark d-flex align-items-center gap-2" href="#">
-                                <FaReceipt size={24} /> RESUMEN
-                            </a>
+                            <Link className="nav-link text-dark d-flex align-items-center gap-2" to="/category/sanduches">
+                                <GiSandwich size={22} /> SÁNDUCHES
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link text-dark d-flex align-items-center gap-2" to="/category/salchipapas">
+                                <GiFrenchFries size={22} /> SALCHIPAPAS
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link text-dark d-flex align-items-center gap-2" to="/category/combos">
+                                <FaPizzaSlice size={22} /> COMBOS
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link text-dark d-flex align-items-center gap-2" to="/category/bebidas">
+                                <GiSodaCan size={22} /> BEBIDAS
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link text-dark d-flex align-items-center gap-2" to="/category/adicionales">
+                                <BiRestaurant size={22} /> ADICIONALES
+                            </Link>
                         </li>
                     </ul>
                 </div>
