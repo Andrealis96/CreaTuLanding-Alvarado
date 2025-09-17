@@ -25,7 +25,7 @@ function ItemListContainer({ saludo }) {
     return (
         <div className="container my-4">
         {!idCategory && (
-            <h2 className="text-center mb-4 text-danger fs-1">{saludo}</h2>
+            <h2 className="text-center mb-4 text-danger fs-1 saludo-oleo ">{saludo}</h2>
         )}
         <div className="row justify-content-center">
             {products.map((prod) => (
