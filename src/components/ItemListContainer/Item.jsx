@@ -16,7 +16,9 @@ function Item({ product }) {
                 <div className="card-body d-flex flex-column shadow ">
                     <h5 className="card-title text-danger fw-bold">{product.title}</h5>
                     <p className="card-text">{product.description}</p>
-                    <p className="fw-bold">${product.price.toFixed(2)}</p>
+                    <p className="fw-bold">
+                        ${Number(product.price).toFixed(2)}
+                    </p>
 
                     {/* Botón pegado al fondo */}
                     <Link 

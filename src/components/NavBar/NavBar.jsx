@@ -1,4 +1,4 @@
-import CartWidget from '../CartWidget/CartWidget';
+import CartWidget from './CartWidget';
 import logoCarbonLenos from '../../assets/iconos/logoCarbonLenos.png';
 import { FaHamburger, FaPizzaSlice } from "react-icons/fa";
 import { GiFrenchFries, GiSodaCan, GiSandwich } from "react-icons/gi";

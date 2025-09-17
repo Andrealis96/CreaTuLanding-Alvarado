@@ -3,6 +3,8 @@ import NavBar from "./components/NavBar/NavBar.jsx";
 import ItemListContainer from "./containers/ItemListContainer.jsx";
 import ItemDetailContainer from "./containers/ItemDetailContainer.jsx";
 import './App.css';
+import Cart from "./components/Cart/Cart";
+import CheckoutForm from "./components/CheckoutForm/CheckoutForm";
 
 function App() {
   return (
@@ -22,9 +24,16 @@ function App() {
 
         {/* Detalle de un producto */}
         <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+        
+        {/* Carrito */}
+        <Route path="/cart" element={<Cart />} />
+
+        {/* Checkout */}
+        <Route path="/checkout" element={<CheckoutForm />} />
 
         {/* Ruta 404 */}
         <Route path="*" element={<h2 className="text-center mt-5">404 - Página no encontrada 😢</h2>} />
+          
       </Routes>
     </div>
   );
