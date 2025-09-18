@@ -27,18 +27,11 @@ function ItemDetailContainer() {
 
     return (
         <div className="container my-5">
-            {/* Botón volver al Home */}
-            <div className="d-flex justify-content-end m-3">
-                <Link to="/" className="btn btn-danger fw-bold">
-                <FaHome size={24} className="me-2" /> Home
-                </Link>
-            </div>
-
             {/* Pasamos producto y función a ItemDetail */}
             <div className="row justify-content-center">
                 <div className="col-md-6">
                     {loading ? (
-                        <p className="text-center">Cargando producto...</p>
+                        <p className="text-center fw-bold text-danger fs-2">Cargando producto...</p>
                     ) : (
                         <ItemDetail product={product} />
                     )}

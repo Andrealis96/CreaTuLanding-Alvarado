@@ -15,7 +15,7 @@ function CartItem({ item }) {
             className="img-cart w-25"
             />
             <div>
-            <h5>{item.title}</h5>
+            <h5 className="fw-bold text-danger">{item.title}</h5>
             <p className="mb-0">Precio unitario: ${item.price}</p>
             <p className="mb-0 fw-bold">
                 Subtotal: ${(item.price * item.quantity).toFixed(2)}
@@ -26,7 +26,7 @@ function CartItem({ item }) {
         {/* Controles de cantidad */}
         <div className="d-flex align-items-center gap-2">
             <button
-            className="btn btn-sm btn-outline-danger"
+            className="btn btn-sm btn-outline-warning"
             onClick={() => removeFromCart(item.id)}
             >
             <FaMinus />
@@ -35,7 +35,7 @@ function CartItem({ item }) {
             <span className="fw-bold">{item.quantity}</span>
 
             <button
-            className="btn btn-sm btn-outline-success"
+            className="btn btn-sm btn-outline-warning"
             onClick={() => addToCart(item, 1)}
             >
             <FaPlus />

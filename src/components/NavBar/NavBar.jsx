@@ -1,6 +1,6 @@
 import CartWidget from './CartWidget';
 import logoCarbonLenos from '../../assets/iconos/logoCarbonLenos.png';
-import { FaHamburger, FaPizzaSlice } from "react-icons/fa";
+import { FaHamburger, FaPizzaSlice, FaHome, FaInfoCircle } from "react-icons/fa";
 import { GiFrenchFries, GiSodaCan, GiSandwich } from "react-icons/gi";
 import { BiRestaurant } from "react-icons/bi";
 import { Link } from "react-router-dom";
@@ -27,8 +27,23 @@ const NavBar = () => {
                 />
             </a>
 
-            {/* Carrito fijo arriba a la derecha */}
-            <CartWidget />
+            {/* Links fijos a la derecha */}
+            <div className="d-flex align-items-center gap-3">
+                {/* Ícono Home */}
+                <Link to="/" className="text-dark">
+                    <FaHome size={28} />
+                </Link>
+
+                {/* Ícono Abous */}
+                <Link to="/about" className="text-dark">
+                    <FaInfoCircle size={24} />
+                </Link>
+
+                {/* Carrito fijo arriba a la derecha */}
+                <Link to="/cart" className="text-dark">
+                <CartWidget />
+                </Link>
+            </div>
 
             {/* Menú lateral */}
             <div 
@@ -41,10 +56,10 @@ const NavBar = () => {
                 <div className="offcanvas-header">
                     <Link 
                         to="/"
-                        className="offcanvas-title text-decoration-none text-dark fw-bold fs-2" // estilos para que se vea igual
+                        className="offcanvas-title text-decoration-none text-danger fw-bold fs-1 saludo-oleo" // estilos para que se vea igual
                         id="menuLateralLabel"
                     >
-                        HOME
+                        Home
                     </Link>
                     {/* Botón de cerrar */}
                     <button 
@@ -60,33 +75,33 @@ const NavBar = () => {
                 <div className="offcanvas-body">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link text-dark d-flex align-items-center gap-2" to="/category/hamburguesas">
-                                <FaHamburger size={22} /> HAMBURGUESAS
+                            <Link className="nav-link text-dark d-flex align-items-center gap-2 fw-bold" to="/category/hamburguesas">
+                                <FaHamburger size={25} /> Hamburguesas
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-dark d-flex align-items-center gap-2" to="/category/sanduches">
-                                <GiSandwich size={22} /> SÁNDUCHES
+                            <Link className="nav-link text-dark d-flex align-items-center gap-2 fw-bold" to="/category/sanduches">
+                                <GiSandwich size={26} /> Sánduches
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-dark d-flex align-items-center gap-2" to="/category/salchipapas">
-                                <GiFrenchFries size={22} /> SALCHIPAPAS
+                            <Link className="nav-link text-dark d-flex align-items-center gap-2 fw-bold" to="/category/salchipapas">
+                                <GiFrenchFries size={25} /> Salchipapas
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-dark d-flex align-items-center gap-2" to="/category/combos">
-                                <FaPizzaSlice size={22} /> COMBOS
+                            <Link className="nav-link text-dark d-flex align-items-center gap-2 fw-bold" to="/category/combos">
+                                <FaPizzaSlice size={25} /> Combos
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-dark d-flex align-items-center gap-2" to="/category/bebidas">
-                                <GiSodaCan size={22} /> BEBIDAS
+                            <Link className="nav-link text-dark d-flex align-items-center gap-2 fw-bold" to="/category/bebidas">
+                                <GiSodaCan size={25} /> Bebidas
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link text-dark d-flex align-items-center gap-2" to="/category/adicionales">
-                                <BiRestaurant size={22} /> ADICIONALES
+                            <Link className="nav-link text-dark d-flex align-items-center gap-2 fw-bold" to="/category/adicionales">
+                                <BiRestaurant size={25} /> Adicionales
                             </Link>
                         </li>
                     </ul>

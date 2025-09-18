@@ -5,6 +5,7 @@ import ItemDetailContainer from "./containers/ItemDetailContainer.jsx";
 import './App.css';
 import Cart from "./components/Cart/Cart";
 import CheckoutForm from "./components/CheckoutForm/CheckoutForm";
+import About from "./pages/About"; //
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
 
         {/* Checkout */}
         <Route path="/checkout" element={<CheckoutForm />} />
+        
+        {/* About */}
+        <Route path="/about" element={<About />} />
 
         {/* Ruta 404 */}
         <Route path="*" element={<h2 className="text-center mt-5">404 - Página no encontrada 😢</h2>} />

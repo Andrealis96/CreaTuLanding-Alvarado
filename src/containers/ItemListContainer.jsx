@@ -20,12 +20,12 @@ function ItemListContainer({ saludo }) {
         });
     }, [idCategory]);
 
-    if (!products.length) return <p className="text-center mt-5">Cargando productos...</p>;
+    if (!products.length) return <p className="text-center mt-5 fw-bold text-danger fs-2">Cargando productos...</p>;
 
     return (
         <div className="container my-4">
         {!idCategory && (
-            <h2 className="text-center mb-4 text-danger fs-1 saludo-oleo ">{saludo}</h2>
+            <h2 className="text-center mb-4 text-danger fs-1 logo-text">{saludo}</h2>
         )}
         <div className="row justify-content-center">
             {products.map((prod) => (

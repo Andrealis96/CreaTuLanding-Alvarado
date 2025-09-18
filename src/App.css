@@ -1,7 +1,17 @@
-.saludo-oleo {
-    font-family: "Oleo Script", system-ui;
-    font-style: normal;
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+.logo-text {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 100px; /* ajusta según necesites */
+    color: red;
+
+    /* borde blanco */
+    -webkit-text-stroke: 1px white; /* para Chrome/Safari */
+    /* sombra negra difuminada */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
 }
+
+
 
 .card-hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
