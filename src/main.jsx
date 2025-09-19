@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { BrowserRouter } from "react-router-dom";
 import { CartProvider } from './context/CartContext.jsx';
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
         <CartProvider>

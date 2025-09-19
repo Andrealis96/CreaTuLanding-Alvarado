@@ -3,9 +3,11 @@ import Item from "./Item";
 const ItemList = ({ products = [] }) => {
     return (
         <div className="row">
-            {products.map(product => (
-                <Item key={product.id} product={product} />
-            ))}
+            {products.length > 0 ? (
+                products.map((product) => <Item key={product.id} product={product} />)
+            ) : (
+                <p className="text-center text-muted">No se encontraron productos</p>
+            )}
         </div>
     );
 };

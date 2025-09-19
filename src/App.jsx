@@ -5,7 +5,7 @@ import ItemDetailContainer from "./containers/ItemDetailContainer.jsx";
 import './App.css';
 import Cart from "./components/Cart/Cart";
 import CheckoutForm from "./components/CheckoutForm/CheckoutForm";
-import About from "./pages/About"; //
+import About from "./pages/About";
 
 function App() {
   return (
